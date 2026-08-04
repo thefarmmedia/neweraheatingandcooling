@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HVAC System Builder | Free Estimate Tool | New ERA Heating &amp; Cooling</title>
-  <meta name="description" content="Use our free interactive HVAC System Builder to get instant Good, Better & Best pricing estimates for your Springfield MO home. Takes 2 minutes. No obligation.">
+  <meta name="description" content="Use our free interactive HVAC System Builder to get instant Comfort Essential, Comfort Plus &amp; Ultimate Comfort pricing estimates for your Springfield MO home. Takes 2 minutes. No obligation.">
   <link rel="canonical" href="https://newerahvac.com/system-builder.html">
   <link rel="stylesheet" href="/css/style.css">
   <style>
@@ -123,7 +123,7 @@
       <span style="font-size:.73rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#fbbf24">Springfield's Only HVAC Pricing Tool</span>
     </div>
     <h1 style="color:white;font-size:clamp(1.8rem,4vw,2.8rem);margin:0 0 12px">Know your options before we arrive — free.</h1>
-    <p style="color:rgba(255,255,255,.75);font-size:1rem;max-width:640px;margin:0">Answer 5 questions about your home and instantly see personalized Good, Better &amp; Best HVAC packages with real Springfield installed pricing. No sign-up, no sales call, no obligation.</p>
+    <p style="color:rgba(255,255,255,.75);font-size:1rem;max-width:640px;margin:0">Answer 5 questions about your home and instantly see personalized Comfort Essential, Comfort Plus &amp; Ultimate Comfort HVAC packages with real Springfield installed pricing. No sign-up, no sales call, no obligation.</p>
   </div>
 </section>
 
@@ -143,7 +143,7 @@
       <div class="hero-card-b">
         <div class="eyebrow-b">Home Comfort System Builder</div>
         <h1>Find the right HVAC system for your home.</h1>
-        <p>Answer a few simple questions and compare personalized Good, Better and Best equipment packages with estimated installed pricing and monthly payment options.</p>
+        <p>Answer a few simple questions and compare personalized Comfort Essential, Comfort Plus &amp; Ultimate Comfort packages with estimated installed pricing and monthly payment options.</p>
         <div class="hero-points"><span>✓ No pressure</span><span>✓ Takes about 2 minutes</span><span>✓ Local installation pricing</span></div>
       </div>
       <div class="side-card-b">
@@ -281,9 +281,9 @@
 <script>
     const state={step:1,stories:'1',system:'gas',priority:'balanced',selectedPackage:null};
     const packageData={
-      good:{label:'Good',name:'Essential Comfort',color:'good',multiplier:1,efficiency:'14.3–15.2 SEER2 • 80% AFUE',desc:'Dependable comfort with the lowest upfront investment.',features:['Single-stage equipment','Standard blower motor','Basic programmable thermostat','10-year parts warranty','Professional installation & removal']},
-      better:{label:'Better',name:'Enhanced Comfort',color:'better',multiplier:1.13,efficiency:'16–17 SEER2 • 96% AFUE',desc:'Balanced efficiency, quieter operation and improved comfort.',features:['Two-stage equipment','Variable-speed blower','Wi-Fi thermostat','Improved humidity control','10-year parts + enhanced labor warranty']},
-      best:{label:'Best',name:'Ultimate Comfort',color:'best',multiplier:1.32,efficiency:'18–20+ SEER2 • 97% AFUE',desc:'Maximum efficiency, quiet operation and precise comfort.',features:['Variable-capacity equipment','Communicating controls','Premium smart thermostat','Advanced humidity management','Premium parts & labor coverage']}
+      good:{label:'Comfort Essential',name:'Reliable performance at the best value.',color:'good',multiplier:1,efficiency:'14.3–15.2 SEER2 • 80% AFUE',desc:'Dependable comfort with the lowest upfront investment.',features:['Single-stage equipment','Standard blower motor','Basic programmable thermostat','10-year parts warranty','Professional installation & removal']},
+      better:{label:'Comfort Plus',name:'Higher efficiency, lower bills, quieter operation.',color:'better',multiplier:1.13,efficiency:'16–17 SEER2 • 96% AFUE',desc:'Balanced efficiency, quieter operation and improved comfort.',features:['Two-stage equipment','Variable-speed blower','Wi-Fi thermostat','Improved humidity control','10-year parts + enhanced labor warranty']},
+      best:{label:'Ultimate Comfort',name:'Maximum efficiency and premium whole-home comfort.',color:'best',multiplier:1.32,efficiency:'18–20+ SEER2 • 97% AFUE',desc:'Maximum efficiency, quiet operation and precise comfort.',features:['Variable-capacity equipment','Communicating controls','Premium smart thermostat','Advanced humidity management','Premium parts & labor coverage']}
     };
     const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
     function getTonnage(){let sqft=+document.querySelector('#sqft').value||1850;let tons=sqft/550;if(document.querySelector('#age').value==='old')tons+=.25;if(document.querySelector('#insulation').value==='poor')tons+=.25;if(document.querySelector('#ceiling').value==='high')tons+=.25;if(state.stories==='2')tons+=.15;tons=Math.round(tons*2)/2;return Math.min(5,Math.max(2,tons))}
