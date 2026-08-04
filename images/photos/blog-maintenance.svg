@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="gblogm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c3a1a"/>
+      <stop offset="100%" stop-color="#1a5a38"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#gblogm)"/>
+  
+  <circle cx="400" cy="190" r="50.4" fill="none" stroke="#ffffff" stroke-width="3.5999999999999996"/>
+  <path d="M376.0,190 l16.8,21.599999999999998 l33.6,-36.0" fill="none" stroke="#16a34a" stroke-width="6.0" stroke-linecap="round"/>
+  <rect x="0" y="398" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="430" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">HVAC Maintenance Tips</text>
+</svg>

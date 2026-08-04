@@ -96,92 +96,270 @@
     <div class="section-header">
       <div class="eyebrow">What We Do</div>
       <h2>Complete Home Comfort Services</h2>
-      <p>From routine maintenance to full system replacements, New ERA Heating &amp; Cooling handles it all — for residential and commercial customers across the Springfield area.</p>
+      <p>From routine maintenance to full system replacements, New ERA handles it all — for residential and commercial customers across the Springfield area.</p>
     </div>
-    <div class="grid-3">
-      <a href="/services/air-conditioning.html" class="service-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 7l-5 5-5-5"/><path d="M17 17l-5-5-5 5"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M7 7l5 5 5-5"/><path d="M7 17l5-5 5 5"/></svg>
-        </div>
-        <h3>Air Conditioning</h3>
-        <p>Installation, repair, maintenance and replacement of central AC systems, mini-splits, and heat pumps. Keep cool all summer long.</p>
-        <span class="link">Learn more →</span>
-      </a>
-      <a href="/services/heating.html" class="service-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg>
-        </div>
-        <h3>Heating &amp; Furnaces</h3>
-        <p>Gas furnace repair, installation, and maintenance. Keep your family warm through Missouri winters with reliable, efficient heating.</p>
-        <span class="link">Learn more →</span>
-      </a>
-      <a href="/services/heat-pumps.html" class="service-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1111 8H2m10.59 11.41A2 2 0 1014 16H2m15.73-8.27A2.5 2.5 0 1119.5 12H2"/></svg>
-        </div>
-        <h3>Heat Pumps</h3>
-        <p>Energy-efficient heat pumps provide year-round comfort. Heat in winter, cool in summer — one system, maximum efficiency.</p>
-        <span class="link">Learn more →</span>
-      </a>
-      <a href="/services/mini-splits.html" class="service-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3>Mini-Split Systems</h3>
-        <p>Ductless mini-split installation and service. Perfect for additions, garages, sunrooms, and homes without existing ductwork.</p>
-        <span class="link">Learn more →</span>
-      </a>
-      <a href="/services/indoor-air-quality.html" class="service-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
-        </div>
-        <h3>Indoor Air Quality</h3>
-        <p>Air purifiers, UV lights, whole-home humidifiers, and advanced filtration. Breathe cleaner, healthier air in your home.</p>
-        <span class="link">Learn more →</span>
-      </a>
-      <a href="/services/water-heaters.html" class="service-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg>
-        </div>
-        <h3>Water Heaters</h3>
-        <p>Traditional and tankless water heater installation, repair, and replacement. Never run out of hot water again.</p>
-        <span class="link">Learn more →</span>
-      </a>
+
+    <!-- Service Tabs -->
+    <div class="svc-tabs" id="svcTabs">
+      <button class="svc-tab active" data-tab="hc">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg>
+        Heating &amp; Cooling
+      </button>
+      <button class="svc-tab" data-tab="aq">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+        Air Quality &amp; More
+      </button>
+      <button class="svc-tab" data-tab="wh">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg>
+        Water
+      </button>
+      <button class="svc-tab" data-tab="cm">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        Commercial
+      </button>
     </div>
+
+    <!-- Heating & Cooling -->
+    <div class="svc-panel active" id="tab-hc">
+      <div class="grid-4">
+        <a href="/services/air-conditioning.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 7l-5 5-5-5"/><path d="M17 17l-5-5-5 5"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M7 7l5 5 5-5"/><path d="M7 17l5-5 5 5"/></svg></div>
+          <h3>Air Conditioning</h3>
+          <p>Installation, repair, maintenance and replacement of central AC systems. Keep cool all summer long.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/services/heating.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg></div>
+          <h3>Heating &amp; Furnaces</h3>
+          <p>Gas furnace repair, installation, and maintenance. Keep your family warm through Missouri winters.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/services/heat-pumps.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1111 8H2m10.59 11.41A2 2 0 1014 16H2m15.73-8.27A2.5 2.5 0 1119.5 12H2"/></svg></div>
+          <h3>Heat Pumps</h3>
+          <p>Energy-efficient heat pumps for year-round comfort. Heat in winter, cool in summer — one system.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/services/mini-splits.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>Mini-Split Systems</h3>
+          <p>Ductless installation and service. Perfect for additions, garages, sunrooms, and homes without ductwork.</p>
+          <span class="link">Learn more →</span>
+        </a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
+        <a href="/services/ac-repair.html" class="svc-pill">AC Repair</a>
+        <a href="/services/ac-installation.html" class="svc-pill">AC Installation</a>
+        <a href="/services/ac-maintenance.html" class="svc-pill">AC Maintenance</a>
+        <a href="/services/ac-replacement.html" class="svc-pill">AC Replacement</a>
+        <a href="/services/furnace-repair.html" class="svc-pill">Furnace Repair</a>
+        <a href="/services/furnace-installation.html" class="svc-pill">Furnace Installation</a>
+        <a href="/services/furnace-maintenance.html" class="svc-pill">Furnace Maintenance</a>
+        <a href="/services/furnace-replacement.html" class="svc-pill">Furnace Replacement</a>
+      </div>
+    </div>
+
+    <!-- Air Quality & More -->
+    <div class="svc-panel" id="tab-aq">
+      <div class="grid-4">
+        <a href="/services/indoor-air-quality.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div>
+          <h3>Indoor Air Quality</h3>
+          <p>Advanced filtration, air testing, and whole-home IAQ solutions for cleaner, healthier air.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/services/air-purifiers.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M2 12l4-4m-4 4l4 4M22 12l-4-4m4 4l-4 4"/></svg></div>
+          <h3>Air Purifiers</h3>
+          <p>Whole-home air purification systems that remove allergens, bacteria, and airborne contaminants.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/services/uv-lights.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+          <h3>UV Lights</h3>
+          <p>UV germicidal lights installed in your HVAC system kill mold, bacteria, and viruses at the source.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/services/humidity-control.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-3.69-2-6.91-5-8.66"/><path d="M8 12a4 4 0 004 4"/></svg></div>
+          <h3>Humidity Control</h3>
+          <p>Whole-home humidifiers and dehumidifiers for balanced comfort — especially important in Missouri winters.</p>
+          <span class="link">Learn more →</span>
+        </a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
+        <a href="/services/thermostats.html" class="svc-pill">Smart Thermostats</a>
+        <a href="/services/boiler-service.html" class="svc-pill">Boiler Service</a>
+      </div>
+    </div>
+
+    <!-- Water -->
+    <div class="svc-panel" id="tab-wh">
+      <div class="grid-4">
+        <a href="/services/water-heaters.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></div>
+          <h3>Water Heaters</h3>
+          <p>Traditional tank water heater installation, repair, and replacement for reliable hot water.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/services/tankless-water-heaters.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="6" x2="12" y2="10"/><circle cx="12" cy="14" r="2"/></svg></div>
+          <h3>Tankless Water Heaters</h3>
+          <p>On-demand hot water with no tank — endless supply, lower energy bills, and a 20+ year lifespan.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/services/water-heater-installation.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+          <h3>Water Heater Installation</h3>
+          <p>Professional installation of new water heating systems — gas, electric, or tankless, all brands.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/services/water-heater-repair.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+          <h3>Water Heater Repair</h3>
+          <p>Fast diagnosis and repair of any water heater issue — no hot water, leaks, pilot light out, and more.</p>
+          <span class="link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Commercial -->
+    <div class="svc-panel" id="tab-cm">
+      <div class="grid-4">
+        <a href="/services/commercial-hvac.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+          <h3>Commercial HVAC</h3>
+          <p>Full-service commercial heating and cooling for offices, retail, restaurants, and industrial facilities.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/services/residential-hvac.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div>
+          <h3>Residential HVAC</h3>
+          <p>Complete home comfort solutions — from single rooms to whole-house systems, we do it all.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/services/electrical.html" class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg></div>
+          <h3>Electrical Services</h3>
+          <p>HVAC-related electrical work including panel upgrades, circuit installation, and EV charger prep.</p>
+          <span class="link">Learn more →</span>
+        </a>
+        <a href="/contact.html" class="service-card" style="border:2px dashed var(--gray-300);background:var(--gray-50)">
+          <div class="service-icon" style="background:var(--gray-100)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+          <h3>Have a Custom Project?</h3>
+          <p>We work with property managers, contractors, and businesses on custom HVAC solutions. Let's talk.</p>
+          <span class="link">Contact us →</span>
+        </a>
+      </div>
+    </div>
+
     <div style="text-align:center;margin-top:36px">
       <a href="/services/" class="btn btn--blue btn--lg">View All Services</a>
     </div>
   </div>
 </section>
 
-<!-- SYSTEM BUILDER CTA -->
-<section style="background:linear-gradient(135deg,#1e3a8a,#2563eb);padding:56px 0;color:white">
-  <div class="container">
-    <div class="grid-2" style="align-items:center;gap:48px">
+<style>
+  .svc-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:28px; background:white; border:1px solid var(--gray-200); border-radius:14px; padding:6px; }
+  .svc-tab { display:flex; align-items:center; gap:8px; padding:11px 20px; border:none; background:transparent; border-radius:10px; font-weight:700; font-size:.9rem; color:var(--gray-600); cursor:pointer; transition:all .18s; white-space:nowrap; }
+  .svc-tab:hover { background:var(--gray-50); color:var(--navy); }
+  .svc-tab.active { background:var(--blue-mid); color:white; box-shadow:0 4px 14px rgba(26,80,166,.25); }
+  .svc-tab.active svg { stroke:white; }
+  .svc-panel { display:none; animation:fadeIn .2s ease; }
+  .svc-panel.active { display:block; }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
+  .svc-pill { display:inline-flex; align-items:center; padding:7px 14px; background:white; border:1px solid var(--gray-200); border-radius:999px; font-size:.82rem; font-weight:700; color:var(--gray-600); text-decoration:none; transition:all .18s; }
+  .svc-pill:hover { border-color:var(--blue-mid); color:var(--blue-mid); background:var(--blue-50); }
+</style>
+<script>
+  document.querySelectorAll('.svc-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.svc-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.svc-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+<!-- SYSTEM BUILDER SHOWCASE -->
+<section style="background:linear-gradient(160deg,#0c1f4a 0%,#1a3a8c 55%,#0d2d6b 100%);padding:72px 0;color:white;overflow:hidden;position:relative">
+  <div style="position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><circle cx=%22160%22 cy=%2240%22 r=%2280%22 fill=%22rgba(255,255,255,.03)%22/><circle cx=%2240%22 cy=%22160%22 r=%2260%22 fill=%22rgba(255,255,255,.02)%22/></svg>');background-size:cover;pointer-events:none"></div>
+  <div class="container" style="position:relative">
+    <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center">
+
+      <!-- Left: copy -->
       <div>
-        <div class="eyebrow" style="color:#fbbf24">Free Interactive Tool</div>
-        <h2 style="color:white;margin-bottom:14px">Build Your Perfect HVAC System</h2>
-        <p style="color:rgba(255,255,255,.8);font-size:1.05rem;margin-bottom:28px">Answer a few quick questions and instantly see personalized Good, Better &amp; Best equipment options with real installed pricing estimates. Takes 2 minutes.</p>
-        <a href="/system-builder.html" class="btn btn--primary btn--lg">Try the System Builder →</a>
-      </div>
-      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
-        <div style="background:rgba(255,255,255,.1);border-radius:12px;padding:20px;text-align:center">
-          <div style="font-size:1.8rem;font-weight:900;color:#fbbf24">3 Options</div>
-          <div style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:4px">Good • Better • Best</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(251,191,36,.15);border:1px solid rgba(251,191,36,.35);border-radius:999px;padding:7px 16px;margin-bottom:20px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <span style="font-size:.78rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#fbbf24">Springfield's Only HVAC Pricing Tool</span>
         </div>
-        <div style="background:rgba(255,255,255,.1);border-radius:12px;padding:20px;text-align:center">
-          <div style="font-size:1.8rem;font-weight:900;color:#fbbf24">2 min</div>
-          <div style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:4px">Quick &amp; Easy</div>
+        <h2 style="color:white;font-size:clamp(1.9rem,4vw,3rem);line-height:1.1;margin:0 0 18px">Know your options<br><em style="font-style:normal;color:#7eb3ff">before we even arrive.</em></h2>
+        <p style="color:rgba(255,255,255,.8);font-size:1.05rem;line-height:1.7;margin:0 0 18px">Most HVAC companies want you clueless — then hit you with a number in your driveway. We do the opposite. Our <strong style="color:white">free System Builder</strong> lets you explore real installed pricing for Comfort Essential, Comfort Plus &amp; Ultimate Comfort packages right now, from your couch.</p>
+        <p style="color:rgba(255,255,255,.65);font-size:.92rem;margin-bottom:30px">Answer 5 quick questions about your home. The tool calculates the right system size, shows your options, and even estimates monthly payments. Takes 2 minutes — and it's completely free with zero obligation.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <a href="/system-builder.html" style="display:inline-flex;align-items:center;gap:10px;background:#fbbf24;color:#0c1f4a;padding:16px 28px;border-radius:14px;font-weight:900;font-size:1.05rem;text-decoration:none;box-shadow:0 8px 28px rgba(251,191,36,.35);transition:.18s">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M4.2 6.5l15.6 11M19.8 6.5l-15.6 11"/><circle cx="12" cy="12" r="2.5"/></svg>
+            Launch Free System Builder
+          </a>
+          <span style="color:rgba(255,255,255,.55);font-size:.85rem">No sign-up required</span>
         </div>
-        <div style="background:rgba(255,255,255,.1);border-radius:12px;padding:20px;text-align:center">
-          <div style="font-size:1.8rem;font-weight:900;color:#fbbf24">Free</div>
-          <div style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:4px">No Obligation</div>
-        </div>
-        <div style="background:rgba(255,255,255,.1);border-radius:12px;padding:20px;text-align:center">
-          <div style="font-size:1.8rem;font-weight:900;color:#fbbf24">Real $</div>
-          <div style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:4px">Installed Pricing</div>
+        <div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:28px">
+          <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-size:.85rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Real installed pricing</div>
+          <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-size:.85rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Comfort Essential / Comfort Plus / Ultimate Comfort</div>
+          <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-size:.85rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Monthly payment estimates</div>
+          <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-size:.85rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>No salesperson pressure</div>
         </div>
       </div>
+
+      <!-- Right: package card preview -->
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <!-- Good -->
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:.2s">
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="background:#12b981;border-radius:8px;padding:7px 12px;font-size:.72rem;font-weight:900;color:white;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap">Comfort Essential</div>
+            <div>
+              <div style="font-weight:800;font-size:.95rem;color:white">14 SEER2 System</div>
+              <div style="font-size:.8rem;color:rgba(255,255,255,.55);margin-top:2px">Standard efficiency · Reliable comfort</div>
+            </div>
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div style="font-size:1.45rem;font-weight:900;color:#7eb3ff">$7,400</div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,.5)">~$84/mo</div>
+          </div>
+        </div>
+        <!-- Better — highlighted -->
+        <div style="background:rgba(255,255,255,.13);border:2px solid rgba(99,162,255,.55);border-radius:16px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative">
+          <div style="position:absolute;top:-11px;left:20px;background:#fbbf24;color:#0c1f4a;font-size:.68rem;font-weight:900;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.07em">Most Popular</div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="background:#f59e0b;border-radius:8px;padding:7px 12px;font-size:.72rem;font-weight:900;color:white;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap">Comfort Plus</div>
+            <div>
+              <div style="font-weight:800;font-size:.95rem;color:white">17 SEER2 System</div>
+              <div style="font-size:.8rem;color:rgba(255,255,255,.65);margin-top:2px">High efficiency · Lower utility bills</div>
+            </div>
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div style="font-size:1.45rem;font-weight:900;color:#fbbf24">$9,800</div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,.5)">~$112/mo</div>
+          </div>
+        </div>
+        <!-- Best -->
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="background:#3b82f6;border-radius:8px;padding:7px 12px;font-size:.72rem;font-weight:900;color:white;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap">Ultimate Comfort</div>
+            <div>
+              <div style="font-weight:800;font-size:.95rem;color:white">20 SEER2 System</div>
+              <div style="font-size:.8rem;color:rgba(255,255,255,.55);margin-top:2px">Premium comfort · Max energy savings</div>
+            </div>
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div style="font-size:1.45rem;font-weight:900;color:#7eb3ff">$12,500</div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,.5)">~$143/mo</div>
+          </div>
+        </div>
+        <p style="font-size:.77rem;color:rgba(255,255,255,.4);text-align:center;margin:4px 0 0">Sample estimates for a 2,000 sq ft Springfield home · Actual pricing customized to your home</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -214,6 +392,7 @@
         </div>
       </div>
       <div>
+        <img src="/images/photos/tech-working-1.svg" alt="New ERA HVAC technician at work" style="width:100%;border-radius:20px;margin-bottom:24px;aspect-ratio:4/3;object-fit:cover">
         <div style="background:var(--gray-50);border-radius:20px;padding:32px">
           <h3 style="margin-bottom:24px">Trusted by Springfield Homeowners</h3>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">

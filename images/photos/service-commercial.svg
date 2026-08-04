@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="gservic" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c1f44"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#gservic)"/>
+  
+  <rect x="278.0" y="176.0" width="144.0" height="48.0" rx="9.6" fill="none" stroke="#ffffff" stroke-width="3.5999999999999996"/>
+  <line x1="302.0" y1="200" x2="398.0" y2="200" stroke="#ffffff" stroke-width="2.4"/>
+  <circle cx="326.0" cy="200" r="4.8" fill="#ffffff"/>
+  <circle cx="350" cy="200" r="4.8" fill="#ffffff"/>
+  <circle cx="374.0" cy="200" r="4.8" fill="#ffffff"/>
+  <path d="M290.0,214.4 l12.0,-9.6 l12.0,9.6" fill="none" stroke="#fbbf24" stroke-width="2.4"/>
+  <rect x="378.0" y="176.0" width="144.0" height="48.0" rx="9.6" fill="none" stroke="#ffffff" stroke-width="3.5999999999999996"/>
+  <line x1="402.0" y1="200" x2="498.0" y2="200" stroke="#ffffff" stroke-width="2.4"/>
+  <circle cx="426.0" cy="200" r="4.8" fill="#ffffff"/>
+  <circle cx="450" cy="200" r="4.8" fill="#ffffff"/>
+  <circle cx="474.0" cy="200" r="4.8" fill="#ffffff"/>
+  <path d="M390.0,214.4 l12.0,-9.6 l12.0,9.6" fill="none" stroke="#fbbf24" stroke-width="2.4"/>
+  <rect x="0" y="448" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">Commercial HVAC</text>
+</svg>

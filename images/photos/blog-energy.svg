@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="gbloge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a0a"/>
+      <stop offset="100%" stop-color="#3a5a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#gbloge)"/>
+  
+  <circle cx="400" cy="190" r="46.2" fill="none" stroke="#fbbf24" stroke-width="3.3000000000000003"/>
+  <text x="400" y="207.6" text-anchor="middle" font-family="Arial" font-size="48.400000000000006" fill="#fbbf24" font-weight="700">$</text>
+  <rect x="0" y="398" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="430" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">Save on Energy Bills</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <linearGradient id="gequipm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c1f44"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="500" fill="url(#gequipm)"/>
+  
+  <rect x="260.8" y="147.0" width="78.39999999999999" height="98.0" rx="16.799999999999997" fill="none" stroke="#ffffff" stroke-width="4.199999999999999"/>
+  <circle cx="300" cy="189.0" r="25.2" fill="none" stroke="#fbbf24" stroke-width="4.199999999999999"/>
+  <text x="300" y="197.4" text-anchor="middle" font-family="Arial" font-size="18.2" fill="#ffffff" font-weight="700">72°</text>
+  <line x1="300" y1="226.8" x2="300" y2="238.0" stroke="#ffffff" stroke-width="2.8"/>
+  <rect x="0" y="448" width="600" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="300" y="480" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">Smart Thermostat</text>
+</svg>

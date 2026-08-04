@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="gblogi" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a2a18"/>
+      <stop offset="100%" stop-color="#1a5c38"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#gblogi)"/>
+  
+  <path d="M400,229.0 q-52.0,-39.0 -13.0,-91.0 q39.0,13.0 52.0,52.0 q-13.0,-39.0 -39.0,39.0 z"
+        fill="rgba(255,255,255,0.25)" stroke="#ffffff" stroke-width="3.25"/>
+  <line x1="400" y1="229.0" x2="406.5" y2="151.0" stroke="#ffffff" stroke-width="2.6" stroke-dasharray="4 3"/>
+  <rect x="0" y="398" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="430" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">Indoor Air Quality Guide</text>
+</svg>

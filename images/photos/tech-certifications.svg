@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="gtechc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a0a"/>
+      <stop offset="100%" stop-color="#3a3a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#gtechc)"/>
+  
+  <path d="M400,137.5 l52.5,22.5 l0,45.0 q0,30.0 -52.5,52.5 q-52.5,-22.5 -52.5,-52.5 l0,-45.0 z"
+        fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M382.0,220 l15.0,18.0 l33.0,-30.0" fill="none" stroke="#fbbf24" stroke-width="5.25" stroke-linecap="round"/>
+  <rect x="0" y="448" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">NATE Certified</text>
+</svg>

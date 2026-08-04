@@ -91,21 +91,91 @@ function renderTopBar() {
 
 function renderHeader(activePage) {
   const path = window.location.pathname;
-  const navHTML = NAV.map(n => {
-    const active = path.includes(n.id) || path.includes(n.href.replace('/','').replace('.html','')) ? 'active' : '';
-    const badge = n.badge ? `<span class="badge badge--gold" style="margin-left:6px;font-size:.7rem">${n.badge}</span>` : '';
-    return `<a href="${n.href}" class="${active}">${n.label}${badge}</a>`;
-  }).join('');
+
+  const servicesMega = `
+<div class="nav-item">
+  <a href="/services/" class="${path.includes('/services') ? 'active' : ''}">Services</a>
+  <div class="mega-menu mega-menu--wide">
+    <div class="mega-cols mega-cols--4">
+      <div class="mega-col">
+        <h5>${svgIcon('snowflake')} Air Conditioning</h5>
+        <a href="/services/ac-installation.html">${svgIcon('wrench')} AC Installation</a>
+        <a href="/services/ac-repair.html">${svgIcon('tool')} AC Repair</a>
+        <a href="/services/ac-maintenance.html">${svgIcon('check')} AC Maintenance</a>
+        <a href="/services/ac-replacement.html">${svgIcon('arrow')} AC Replacement</a>
+        <a href="/services/air-conditioning.html">${svgIcon('arrow')} All AC Services</a>
+      </div>
+      <div class="mega-col">
+        <h5>${svgIcon('flame')} Heating</h5>
+        <a href="/services/furnace-installation.html">${svgIcon('wrench')} Furnace Installation</a>
+        <a href="/services/furnace-repair.html">${svgIcon('tool')} Furnace Repair</a>
+        <a href="/services/furnace-maintenance.html">${svgIcon('check')} Furnace Maintenance</a>
+        <a href="/services/furnace-replacement.html">${svgIcon('arrow')} Furnace Replacement</a>
+        <a href="/services/boiler-service.html">${svgIcon('thermometer')} Boiler Service</a>
+        <a href="/services/heat-pumps.html">${svgIcon('zap')} Heat Pumps</a>
+        <a href="/services/mini-splits.html">${svgIcon('wind')} Mini-Splits</a>
+      </div>
+      <div class="mega-col">
+        <h5>${svgIcon('wind')} Air Quality &amp; More</h5>
+        <a href="/services/indoor-air-quality.html">${svgIcon('wind')} Indoor Air Quality</a>
+        <a href="/services/air-purifiers.html">${svgIcon('shield')} Air Purifiers</a>
+        <a href="/services/uv-lights.html">${svgIcon('zap')} UV Light Systems</a>
+        <a href="/services/humidity-control.html">${svgIcon('droplets')} Humidity Control</a>
+        <a href="/services/thermostats.html">${svgIcon('thermometer')} Smart Thermostats</a>
+        <a href="/services/electrical.html">${svgIcon('zap')} Electrical</a>
+      </div>
+      <div class="mega-col">
+        <h5>${svgIcon('droplets')} Water &amp; Commercial</h5>
+        <a href="/services/water-heaters.html">${svgIcon('droplets')} Water Heaters</a>
+        <a href="/services/water-heater-installation.html">${svgIcon('wrench')} Water Heater Install</a>
+        <a href="/services/water-heater-repair.html">${svgIcon('tool')} Water Heater Repair</a>
+        <a href="/services/tankless-water-heaters.html">${svgIcon('arrow')} Tankless Units</a>
+        <a href="/services/commercial-hvac.html">${svgIcon('building')} Commercial HVAC</a>
+        <a href="/services/residential-hvac.html">${svgIcon('home')} Residential HVAC</a>
+        <a href="/services/">${svgIcon('arrow')} All Services →</a>
+      </div>
+    </div>
+    <div class="mega-footer">
+      <span style="font-size:.85rem;color:var(--gray-500)">Need help choosing? Our experts will guide you.</span>
+      <div style="display:flex;gap:12px">
+        <a href="/emergency.html" style="color:var(--red)!important">🚨 Emergency Service</a>
+        <a href="/system-builder.html">Free System Builder →</a>
+      </div>
+    </div>
+  </div>
+</div>`;
+
+  const areasMega = `
+<div class="nav-item">
+  <a href="/service-areas/" class="${path.includes('/service-areas') ? 'active' : ''}">Service Areas</a>
+  <div class="mega-menu">
+    <h5 style="font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-400);margin-bottom:16px">Southwest Missouri — 24 Communities Served</h5>
+    <div class="mega-areas-grid">
+      ${SERVICE_AREAS.map(a => `<a href="/service-areas/${SERVICE_AREA_SLUGS[a]}.html">${a}</a>`).join('')}
+    </div>
+    <div class="mega-footer">
+      <span style="font-size:.85rem;color:var(--gray-500)">Based in Springfield, MO. Fast response to all areas.</span>
+      <a href="/service-areas/">View All Service Areas →</a>
+    </div>
+  </div>
+</div>`;
 
   return `
 <header class="site-header">
   <div class="container">
     <div class="header-inner">
       <a href="/" class="logo" aria-label="${SITE.company} Home">
-        <img src="/images/logo.svg" alt="${SITE.company} Logo" width="148" height="56" loading="eager">
+        <img src="/images/logo.svg" alt="${SITE.company} Logo" width="184" height="51" loading="eager">
       </a>
       <nav class="nav" aria-label="Main navigation">
-        ${navHTML}
+        ${servicesMega}
+        ${areasMega}
+        <a href="/system-builder.html" class="${path.includes('system-builder') ? 'active' : ''}">
+          System Builder <span class="badge badge--gold" style="margin-left:4px;font-size:.68rem">Free</span>
+        </a>
+        <a href="/financing.html" class="${path.includes('financing') ? 'active' : ''}">Financing</a>
+        <a href="/blog/" class="${path.includes('/blog') ? 'active' : ''}">Blog</a>
+        <a href="/about.html" class="${path.includes('about') ? 'active' : ''}">About</a>
         <a href="/contact.html" class="nav-cta">Get a Free Quote</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -116,10 +186,24 @@ function renderHeader(activePage) {
 </header>
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
   <div class="mobile-menu-top">
-    <a href="/" class="logo"><img src="/images/logo.svg" alt="${SITE.company}" height="48"></a>
+    <a href="/" class="logo"><img src="/images/logo.svg" alt="${SITE.company}" height="44"></a>
     <button id="closeMenu" aria-label="Close menu" style="background:#f3f4f6;border-radius:8px;padding:8px;font-size:1.3rem">×</button>
   </div>
-  ${NAV.map(n => `<a href="${n.href}">${n.label}${n.badge ? ' ✦' : ''}</a>`).join('')}
+  <a href="/services/" style="font-weight:800">Services ↓</a>
+  <a href="/services/air-conditioning.html" style="padding-left:28px;font-size:.95rem">Air Conditioning</a>
+  <a href="/services/heating.html" style="padding-left:28px;font-size:.95rem">Heating &amp; Furnaces</a>
+  <a href="/services/heat-pumps.html" style="padding-left:28px;font-size:.95rem">Heat Pumps &amp; Mini-Splits</a>
+  <a href="/services/indoor-air-quality.html" style="padding-left:28px;font-size:.95rem">Indoor Air Quality</a>
+  <a href="/services/water-heaters.html" style="padding-left:28px;font-size:.95rem">Water Heaters</a>
+  <a href="/services/commercial-hvac.html" style="padding-left:28px;font-size:.95rem">Commercial HVAC</a>
+  <a href="/service-areas/" style="font-weight:800">Service Areas ↓</a>
+  ${SERVICE_AREAS.slice(0,8).map(a => `<a href="/service-areas/${SERVICE_AREA_SLUGS[a]}.html" style="padding-left:28px;font-size:.95rem">${a}</a>`).join('')}
+  <a href="/service-areas/" style="padding-left:28px;font-size:.95rem;color:var(--blue-mid)">View All 24 Areas →</a>
+  <a href="/system-builder.html">System Builder ✦ Free Tool</a>
+  <a href="/financing.html">Financing</a>
+  <a href="/blog/">Blog</a>
+  <a href="/about.html">About</a>
+  <a href="/emergency.html" style="color:var(--red);font-weight:800">🚨 Emergency Service</a>
   <div class="mobile-menu-cta">
     <a href="tel:${SITE.phoneRaw}" class="btn btn--primary btn--lg" style="justify-content:center;text-align:center">
       ${svgIcon('phone')} Call ${SITE.phone}
@@ -177,7 +261,7 @@ function renderFooter() {
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="/images/logo-white.svg" alt="${SITE.company}" height="56">
+        <img src="/images/logo-white.svg" alt="${SITE.company}" height="52">
         <p>Springfield's trusted HVAC experts since ${SITE.founded}. Residential &amp; commercial heating, cooling, air quality, and water heater services.</p>
         <a href="tel:${SITE.phoneRaw}" class="phone">${SITE.phone}</a>
         <a href="mailto:${SITE.email}" style="color:rgba(255,255,255,.6);font-size:.88rem">${SITE.email}</a>

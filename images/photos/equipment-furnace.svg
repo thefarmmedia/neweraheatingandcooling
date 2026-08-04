@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <linearGradient id="gequipm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0c20"/>
+      <stop offset="100%" stop-color="#3a1a50"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="500" fill="url(#gequipm)"/>
+  
+  <rect x="261.0" y="138.5" width="78.0" height="104.0" rx="6.5" fill="none" stroke="#ffffff" stroke-width="3.9000000000000004"/>
+  <rect x="276.6" y="151.5" width="46.800000000000004" height="28.6" rx="3.9000000000000004" fill="rgba(255,180,50,0.6)"/>
+  <path d="M289.6,165.8 q10.4,-13.0 0,-20.8 q10.4,10.4 10.4,20.8" fill="#fbbf24"/>
+  <line x1="274.0" y1="223.0" x2="326.0" y2="223.0" stroke="#ffffff" stroke-width="2.6"/>
+  <line x1="274.0" y1="233.4" x2="326.0" y2="233.4" stroke="#ffffff" stroke-width="2.6"/>
+  <rect x="0" y="448" width="600" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="300" y="480" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">High-Efficiency Furnace</text>
+</svg>
