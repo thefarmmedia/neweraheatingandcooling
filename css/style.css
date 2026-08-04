@@ -333,6 +333,9 @@ p { color: var(--gray-700); line-height: 1.7; }
 .stat-card .stat-num { font-size: 3rem; font-weight: 900; color: var(--blue-mid); line-height: 1; margin-bottom: 8px; }
 .stat-card .stat-label { font-size: .95rem; color: var(--gray-600); font-weight: 600; }
 
+/* ─── GRID ITEM MIN-WIDTH FIX (prevents stat cards from forcing grid wider than viewport) ─── */
+.grid-2 > *, .grid-3 > *, .grid-4 > * { min-width: 0; }
+
 /* ─── WHY CHOOSE US ─── */
 .feature-item { display: flex; gap: 18px; align-items: flex-start; }
 .feature-icon { width: 48px; height: 48px; border-radius: var(--radius); background: var(--blue-50); display: grid; place-items: center; flex-shrink: 0; margin-top: 4px; }
@@ -545,6 +548,8 @@ p { color: var(--gray-700); line-height: 1.7; }
   .area-grid { grid-template-columns: repeat(2,1fr); }
   .hero-actions { flex-direction: column; align-items: stretch; }
   h1 { font-size: clamp(1.8rem,6vw,2.5rem); }
+  .stat-card { padding: 16px 12px; }
+  .stat-card .stat-num { font-size: 2rem; }
 }
 @media (max-width: 480px) {
   .container { width: calc(100% - 32px); }
