@@ -1,28 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295 88" role="img" aria-label="New ERA Heating and Cooling">
-  <title>New ERA Heating &amp; Cooling</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 255">
+  <defs>
+    <!-- Metallic gloss gradient matching the original -->
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0d0d0d"/>
+      <stop offset="18%"  stop-color="#2a2a2a"/>
+      <stop offset="32%"  stop-color="#787878"/>
+      <stop offset="42%"  stop-color="#d0d0d0"/>
+      <stop offset="52%"  stop-color="#909090"/>
+      <stop offset="65%"  stop-color="#2e2e2e"/>
+      <stop offset="82%"  stop-color="#111111"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+  </defs>
 
-  <!-- Three-arc swirl ring: r=33, circumference≈207px, each arc=240°≈138px, gap=120°≈69px -->
-  <g transform="translate(44,44)">
-    <!-- Green arc — rendered first (back) -->
-    <circle cx="0" cy="0" r="33" fill="none" stroke="#27a148" stroke-width="8.5"
-            stroke-dasharray="130 77" stroke-linecap="round"
-            transform="rotate(150)"/>
-    <!-- Blue arc — middle -->
-    <circle cx="0" cy="0" r="33" fill="none" stroke="#1a56a6" stroke-width="8.5"
-            stroke-dasharray="130 77" stroke-linecap="round"
-            transform="rotate(30)"/>
-    <!-- Red arc — rendered last (front / on top) -->
-    <circle cx="0" cy="0" r="33" fill="none" stroke="#d42828" stroke-width="8.5"
-            stroke-dasharray="130 77" stroke-linecap="round"
-            transform="rotate(-90)"/>
+  <!-- "NewERA" — bold italic with metallic gradient -->
+  <g transform="skewX(-10) translate(30, 0)">
+    <text x="0" y="200"
+          font-family="Impact, 'Arial Black', Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+          font-size="210" font-weight="900"
+          fill="url(#chrome)">NewERA</text>
   </g>
 
-  <!-- Wordmark -->
-  <text y="43" font-family="Arial, Helvetica, sans-serif" font-size="31" letter-spacing="-0.5">
-    <tspan x="96" fill="#444444" font-weight="300">New</tspan><tspan fill="#111111" font-weight="900">ERA</tspan>
-  </text>
-
-  <!-- Tagline -->
-  <text x="97" y="63" font-family="Arial, Helvetica, sans-serif" font-size="10.5"
-        fill="#888888" letter-spacing="2.8" font-weight="400">HEATING &amp; COOLING</text>
+  <!-- "HEATING & COOLING" tagline -->
+  <text x="68" y="246"
+        font-family="'Arial', Helvetica, sans-serif"
+        font-size="21" fill="#aaaaaa" letter-spacing="13" font-weight="400">HEATING &amp; COOLING</text>
 </svg>
