@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HVAC System Builder | Free Estimate Tool | New ERA Heating &amp; Cooling</title>
+  <meta name="description" content="Use our free interactive HVAC System Builder to get instant Good, Better & Best pricing estimates for your Springfield MO home. Takes 2 minutes. No obligation.">
+  <link rel="canonical" href="https://newerahvac.com/system-builder.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    :root{
+      --bg:#f6f8fc;--surface:#ffffff;--text:#152033;--muted:#667085;--line:#e5eaf2;
+      --brand:#2165f5;--brand-dark:#174fd0;--good:#12b981;--better:#f59e0b;--best:#3b82f6;
+      --danger:#b42318;--shadow:0 18px 55px rgba(20,34,66,.09);--radius:22px;
+    }
+    .builder-wrap{background:linear-gradient(180deg,#eef4ff 0,#f8fafc 280px,#f6f8fc 100%);padding:40px 0 80px}
+    .shell{width:min(1240px,calc(100% - 28px));margin:0 auto}
+    .topbar-b{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:24px}
+    .brand-b{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.02em}
+    .brand-mark{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--brand),#6fa2ff);display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(33,101,245,.28)}
+    .brand-mark svg{width:25px;height:25px}
+    .pill{font-size:.82rem;color:var(--brand);background:#eaf1ff;border:1px solid #ccdcff;padding:8px 12px;border-radius:999px;font-weight:800}
+    .hero-b{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch;margin-bottom:24px}
+    .hero-card-b,.side-card-b,.panel-b{background:rgba(255,255,255,.94);border:1px solid rgba(217,226,240,.92);box-shadow:var(--shadow);border-radius:var(--radius)}
+    .hero-card-b{padding:38px}
+    .eyebrow-b{display:inline-flex;gap:8px;align-items:center;color:var(--brand);font-weight:900;font-size:.82rem;text-transform:uppercase;letter-spacing:.1em}
+    .hero-b h1{font-size:clamp(2.2rem,5vw,4.5rem);line-height:.98;letter-spacing:-.055em;margin:16px 0 18px;max-width:760px}
+    .hero-b p{font-size:1.08rem;line-height:1.65;color:var(--muted);max-width:700px;margin:0}
+    .hero-points{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .hero-points span{display:inline-flex;align-items:center;gap:7px;background:#f8fafc;border:1px solid var(--line);padding:10px 12px;border-radius:999px;color:#44506a;font-weight:700;font-size:.9rem}
+    .side-card-b{padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(160deg,#0f2f70,#2165f5)}
+    .side-card-b *{color:#fff}
+    .side-card-b h2{font-size:1.55rem;margin:0 0 10px}
+    .side-card-b p{color:#dbe7ff;margin:0;line-height:1.55}
+    .system-visual{height:205px;display:grid;place-items:center;position:relative;margin-top:18px}
+    .unit{position:absolute;border-radius:18px;background:linear-gradient(145deg,#eef2f7,#9ca7b7);border:5px solid #dbe0e7;box-shadow:0 22px 40px rgba(5,24,66,.34)}
+    .unit.outdoor{width:160px;height:118px;left:14%;bottom:12px}
+    .unit.outdoor:before{content:"";position:absolute;inset:16px 20px 28px;border-radius:50%;border:10px solid #5f6875;box-shadow:inset 0 0 0 10px #cfd6df}
+    .unit.outdoor:after{content:"";position:absolute;left:20px;right:20px;bottom:12px;height:8px;background:repeating-linear-gradient(90deg,#5e6876 0 6px,transparent 6px 11px)}
+    .unit.indoor{width:92px;height:165px;right:16%;bottom:12px;background:linear-gradient(145deg,#fafafa,#b9c0ca)}
+    .unit.indoor:before{content:"";position:absolute;left:13px;right:13px;top:18px;height:55px;border-radius:8px;background:repeating-linear-gradient(0deg,#505966 0 4px,#cbd2da 4px 8px)}
+    .unit.indoor:after{content:"COMFORT";position:absolute;left:11px;right:11px;bottom:25px;background:#1d5fec;color:#fff;font-size:.58rem;text-align:center;padding:7px 3px;border-radius:5px;font-weight:900;letter-spacing:.08em}
+    .main-grid-b{display:grid;grid-template-columns:360px 1fr;gap:24px;align-items:start}
+    .panel-b{padding:24px}
+    .sticky-b{position:sticky;top:80px}
+    .panel-b h2{margin:0 0 6px;font-size:1.35rem}
+    .panel-b .sub{color:var(--muted);margin:0 0 22px;line-height:1.5}
+    .progress-b{height:9px;background:#edf1f7;border-radius:999px;overflow:hidden;margin:18px 0 24px}
+    .progress-b>div{height:100%;width:20%;background:linear-gradient(90deg,var(--brand),#71a1ff);transition:.25s}
+    .step{display:none}.step.active{display:block;animation:fade .22s ease}
+    @keyframes fade{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:none}}
+    .step label{display:block;font-weight:800;font-size:.9rem;margin:14px 0 7px}
+    .step input,.step select{width:100%;padding:13px 14px;border:1px solid #d7deea;border-radius:12px;background:#fff;color:var(--text);outline:none;transition:.18s}
+    .step input:focus,.step select:focus{border-color:var(--brand);box-shadow:0 0 0 4px rgba(33,101,245,.1)}
+    .choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+    .choice{border:1px solid #dce3ee;background:#fff;border-radius:13px;padding:12px;text-align:left;font-weight:800;color:#344054;min-height:50px;cursor:pointer}
+    .choice.active{border-color:var(--brand);background:#edf4ff;color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand)}
+    .nav-b{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
+    .btn-b{border:0;border-radius:13px;padding:13px 18px;font-weight:900;transition:.18s;cursor:pointer}
+    .btn-b:hover{transform:translateY(-1px)}
+    .btn-primary-b{background:var(--brand);color:#fff;box-shadow:0 10px 22px rgba(33,101,245,.2)}
+    .btn-primary-b:hover{background:var(--brand-dark)}
+    .btn-secondary-b{background:#eef2f7;color:#475467}
+    .summary-b{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+    .summary-item{background:#fff;border:1px solid var(--line);border-radius:15px;padding:14px}
+    .summary-item small{display:block;color:var(--muted);font-weight:700;margin-bottom:5px}
+    .summary-item strong{font-size:1rem}
+    .results-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:18px}
+    .results-head h2{font-size:1.7rem;margin:0 0 4px}
+    .results-head p{margin:0;color:var(--muted)}
+    .cards-b{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .package{background:#fff;border:1px solid var(--line);border-radius:19px;overflow:hidden;box-shadow:0 10px 28px rgba(16,35,76,.06);position:relative}
+    .package.recommended{box-shadow:0 0 0 3px rgba(33,101,245,.2),0 18px 42px rgba(16,35,76,.1)}
+    .recommend-badge{position:absolute;right:12px;top:54px;background:#fff;color:var(--brand);padding:6px 9px;border-radius:999px;font-size:.68rem;font-weight:900;box-shadow:0 5px 16px rgba(12,35,86,.14)}
+    .package-head{color:#fff;text-align:center;padding:15px;font-size:1.1rem;font-weight:900}
+    .good .package-head{background:var(--good)}.better .package-head{background:var(--better)}.best .package-head{background:var(--best)}
+    .package-body{padding:20px}
+    .package h3{text-align:center;font-size:1.16rem;line-height:1.35;margin:7px 0}
+    .spec{text-align:center;color:var(--muted);font-size:.86rem;line-height:1.45;min-height:40px}
+    .mini-unit{height:120px;margin:14px auto;width:175px;position:relative;background:#f4f6f9;border-radius:16px;overflow:hidden}
+    .mini-unit:before{content:"";position:absolute;width:94px;height:68px;left:20px;bottom:20px;border-radius:10px;background:linear-gradient(140deg,#dbe1e8,#7e8996);border:4px solid #cfd5dc;box-shadow:0 10px 18px rgba(36,48,64,.18)}
+    .mini-unit:after{content:"";position:absolute;width:52px;height:88px;right:20px;bottom:17px;border-radius:8px;background:linear-gradient(145deg,#eef1f5,#99a3af);border:4px solid #d3d8df}
+    .price-label{text-align:center;color:var(--muted);font-size:.82rem}
+    .price{text-align:center;margin:4px 0 2px;font-size:1.85rem;font-weight:950;color:var(--brand);letter-spacing:-.04em}
+    .price-range{text-align:center;color:#475467;font-size:.86rem}
+    .monthly{text-align:center;color:var(--muted);font-size:.83rem;margin:8px 0 15px}
+    .efficiency{background:#f8fafc;border:1px solid var(--line);border-radius:13px;padding:12px;margin:12px 0}
+    .efficiency strong{display:block;font-size:.84rem;margin-bottom:5px}
+    .efficiency span{color:var(--muted);font-size:.78rem;line-height:1.45;display:block}
+    .features-b{list-style:none;padding:0;margin:14px 0 18px;display:grid;gap:9px}
+    .features-b li{font-size:.82rem;color:#475467;display:flex;gap:8px;align-items:flex-start}
+    .check{width:18px;height:18px;border-radius:50%;background:#eaf1ff;color:var(--brand);display:grid;place-items:center;flex:0 0 auto;font-size:.68rem;font-weight:900}
+    .package .btn-b{width:100%;margin-top:8px}
+    .outline-b{background:#fff;color:var(--brand);border:1px solid var(--brand)}
+    .disclaimer-b{margin-top:18px;background:#fff8e8;border:1px solid #f8df9b;color:#725410;border-radius:14px;padding:13px 15px;font-size:.82rem;line-height:1.45}
+    .addons-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .addon{border:1px solid var(--line);border-radius:13px;padding:12px;display:flex;justify-content:space-between;gap:10px;align-items:center;background:#fff}
+    .addon span{font-size:.82rem;font-weight:800}.addon small{color:var(--muted);display:block;margin-top:3px}
+    .addon input[type=checkbox]{width:18px;height:18px}
+    .lead-modal{position:fixed;inset:0;background:rgba(5,16,40,.62);display:none;place-items:center;padding:16px;z-index:500}
+    .lead-modal.open{display:grid}
+    .modal{width:min(560px,100%);background:#fff;border-radius:22px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.28)}
+    .modal-top{display:flex;justify-content:space-between;gap:16px}
+    .close-m{border:0;background:#eef2f7;border-radius:10px;width:38px;height:38px;font-size:1.25rem;cursor:pointer}
+    .modal h2{margin:0 0 7px}.modal p{color:var(--muted);margin:0 0 18px;line-height:1.5}
+    .form-grid-m{display:grid;grid-template-columns:1fr 1fr;gap:12px}.full-m{grid-column:1/-1}
+    .form-grid-m input{width:100%;padding:13px 14px;border:1px solid #d7deea;border-radius:12px;outline:none}
+    .success-m{display:none;text-align:center;padding:22px}.success-m.show{display:block}.form-wrap-m.hide{display:none}
+    .success-icon-m{width:64px;height:64px;border-radius:50%;background:#e9fbf4;color:var(--good);display:grid;place-items:center;margin:0 auto 12px;font-size:2rem;font-weight:900}
+    @media(max-width:1050px){.hero-b{grid-template-columns:1fr}.main-grid-b{grid-template-columns:1fr}.sticky-b{position:static}.cards-b{grid-template-columns:1fr}.package{max-width:680px;margin:auto;width:100%}.summary-b{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.hero-card-b{padding:25px}.side-card-b{padding:22px}.panel-b{padding:17px}.choice-grid,.addons-grid,.form-grid-m{grid-template-columns:1fr}.summary-b{grid-template-columns:1fr 1fr}.results-head{align-items:flex-start;flex-direction:column}.full-m{grid-column:auto}}
+  </style>
+</head>
+<body>
+<div id="topbar"></div>
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumbs"><a href="/">Home</a><span>›</span><span>HVAC System Builder</span></nav>
+    <h1>Free HVAC System Builder</h1>
+    <p>Get instant Good, Better &amp; Best pricing estimates for your Springfield home. No pressure, no obligation.</p>
+  </div>
+</section>
+
+<div class="builder-wrap">
+  <main class="shell">
+    <div class="topbar-b">
+      <div class="brand-b">
+        <div class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M4.2 6.5l15.6 11M19.8 6.5l-15.6 11"/><circle cx="12" cy="12" r="2.5"/></svg>
+        </div>
+        New ERA Heating &amp; Cooling
+      </div>
+      <span class="pill">Instant HVAC estimate</span>
+    </div>
+
+    <section class="hero-b">
+      <div class="hero-card-b">
+        <div class="eyebrow-b">Home Comfort System Builder</div>
+        <h1>Find the right HVAC system for your home.</h1>
+        <p>Answer a few simple questions and compare personalized Good, Better and Best equipment packages with estimated installed pricing and monthly payment options.</p>
+        <div class="hero-points"><span>✓ No pressure</span><span>✓ Takes about 2 minutes</span><span>✓ Local installation pricing</span></div>
+      </div>
+      <div class="side-card-b">
+        <div><h2>Comfort that fits your home—and your budget.</h2><p>We'll estimate system size, match your priorities and show three clear choices.</p></div>
+        <div class="system-visual"><div class="unit outdoor"></div><div class="unit indoor"></div></div>
+      </div>
+    </section>
+
+    <section class="main-grid-b">
+      <aside class="panel-b sticky-b">
+        <h2>Build your recommendation</h2>
+        <p class="sub">Your answers adjust the equipment type, size and package recommendation.</p>
+        <div class="progress-b"><div id="progressBar"></div></div>
+
+        <div class="step active" data-step="1">
+          <label for="zip">ZIP code</label><input id="zip" inputmode="numeric" maxlength="5" placeholder="65804" value="65804">
+          <label for="sqft">Heated &amp; cooled square footage</label><input id="sqft" type="number" min="500" max="6000" step="50" value="1850">
+          <label>Number of stories</label>
+          <div class="choice-grid" data-name="stories">
+            <button class="choice active" data-value="1">1 story</button>
+            <button class="choice" data-value="2">2+ stories</button>
+          </div>
+        </div>
+
+        <div class="step" data-step="2">
+          <label for="age">Approximate year built</label>
+          <select id="age"><option value="new">2005 or newer</option><option value="mid" selected>1980–2004</option><option value="old">Before 1980</option></select>
+          <label for="insulation">Insulation quality</label>
+          <select id="insulation"><option value="good">Good / recently upgraded</option><option value="average" selected>Average</option><option value="poor">Poor / drafty</option></select>
+          <label for="ceiling">Ceiling height</label>
+          <select id="ceiling"><option value="standard" selected>8–9 feet</option><option value="high">10+ feet</option></select>
+        </div>
+
+        <div class="step" data-step="3">
+          <label>What are you replacing?</label>
+          <div class="choice-grid" data-name="system">
+            <button class="choice active" data-value="gas">AC + gas furnace</button>
+            <button class="choice" data-value="heatpump">Heat pump system</button>
+            <button class="choice" data-value="ac">Air conditioner only</button>
+            <button class="choice" data-value="unsure">Not sure</button>
+          </div>
+          <label for="systemAge">Age of current equipment</label>
+          <select id="systemAge"><option value="under10">Under 10 years</option><option value="10to15">10–15 years</option><option value="over15" selected>Over 15 years</option><option value="unknown">Not sure</option></select>
+        </div>
+
+        <div class="step" data-step="4">
+          <label>What matters most?</label>
+          <div class="choice-grid" data-name="priority">
+            <button class="choice" data-value="price">Lowest price</button>
+            <button class="choice active" data-value="balanced">Balanced value</button>
+            <button class="choice" data-value="efficiency">Energy savings</button>
+            <button class="choice" data-value="comfort">Best comfort</button>
+          </div>
+          <label for="issues">Biggest comfort concern</label>
+          <select id="issues"><option value="none">No major issue</option><option value="hotcold" selected>Hot and cold rooms</option><option value="bills">High utility bills</option><option value="humidity">Humidity</option><option value="noise">Loud equipment</option></select>
+        </div>
+
+        <div class="step" data-step="5">
+          <label>Optional upgrades</label>
+          <div class="addons-grid">
+            <label class="addon"><span>Smart thermostat<small>+$425</small></span><input class="addon-check" type="checkbox" value="425" data-label="Smart thermostat"></label>
+            <label class="addon"><span>Media air cleaner<small>+$875</small></span><input class="addon-check" type="checkbox" value="875" data-label="Media air cleaner"></label>
+            <label class="addon"><span>Surge protection<small>+$325</small></span><input class="addon-check" type="checkbox" value="325" data-label="Surge protection"></label>
+            <label class="addon"><span>Whole-home humidifier<small>+$1,150</small></span><input class="addon-check" type="checkbox" value="1150" data-label="Whole-home humidifier"></label>
+          </div>
+        </div>
+
+        <div class="nav-b">
+          <button id="backBtn" class="btn-b btn-secondary-b" disabled>Back</button>
+          <button id="nextBtn" class="btn-b btn-primary-b">Next step</button>
+        </div>
+      </aside>
+
+      <div>
+        <div class="summary-b">
+          <div class="summary-item"><small>Estimated size</small><strong id="sizeSummary">3.5 tons</strong></div>
+          <div class="summary-item"><small>System type</small><strong id="systemSummary">AC + Gas Furnace</strong></div>
+          <div class="summary-item"><small>Home size</small><strong id="sqftSummary">1,850 sq. ft.</strong></div>
+          <div class="summary-item"><small>Recommended</small><strong id="recommendSummary">Better</strong></div>
+        </div>
+        <section class="panel-b">
+          <div class="results-head">
+            <div><h2>Your estimated system options</h2><p>Pricing updates as you complete the builder.</p></div>
+            <button class="btn-b btn-secondary-b" id="resetBtn">Reset</button>
+          </div>
+          <div class="cards-b" id="cards"></div>
+          <div class="disclaimer-b"><strong>Important:</strong> This tool provides a preliminary recommendation only. Final equipment sizing and exact pricing require an in-home evaluation, ductwork review and professional load calculation. Call us at <strong>(417) 732-8400</strong> to schedule your free in-home estimate.</div>
+        </section>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="lead-modal" id="leadModal" role="dialog" aria-modal="true">
+  <div class="modal">
+    <div class="form-wrap-m" id="formWrap">
+      <div class="modal-top">
+        <div><h2>Book your in-home appointment</h2><p id="selectedPackageText">Your selected package is ready.</p></div>
+        <button class="close-m" id="closeModal" aria-label="Close">×</button>
+      </div>
+      <form id="leadForm">
+        <div class="form-grid-m">
+          <div><label for="firstName">First name</label><input id="firstName" required></div>
+          <div><label for="lastName">Last name</label><input id="lastName" required></div>
+          <div><label for="phone">Phone</label><input id="phone" type="tel" required></div>
+          <div><label for="email">Email</label><input id="email" type="email" required></div>
+          <div class="full-m"><label for="address">Project address</label><input id="address" required></div>
+          <div class="full-m"><button class="btn-b btn-primary-b" style="width:100%;margin-top:8px">Request appointment</button></div>
+        </div>
+      </form>
+    </div>
+    <div class="success-m" id="success">
+      <div class="success-icon-m">✓</div>
+      <h2>Request received!</h2>
+      <p>We'll review your recommendation and contact you within 1 hour to confirm the right system and appointment time. You can also call us directly at <strong>(417) 732-8400</strong>.</p>
+      <button class="btn-b btn-primary-b" id="doneBtn" style="margin-top:16px">Done</button>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <div class="container">
+    <h2>Prefer to Talk to an Expert?</h2>
+    <p>Call us at (417) 732-8400 and we'll walk you through your options over the phone — no tool required.</p>
+    <div class="cta-actions">
+      <a href="tel:4177328400" class="phone-btn">(417) 732-8400</a>
+      <a href="/contact.html" class="btn btn--outline btn--lg">Schedule Free In-Home Estimate</a>
+    </div>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<script src="/js/components.js"></script>
+<script src="/js/main.js"></script>
+<script>
+    const state={step:1,stories:'1',system:'gas',priority:'balanced',selectedPackage:null};
+    const packageData={
+      good:{label:'Good',name:'Essential Comfort',color:'good',multiplier:1,efficiency:'14.3–15.2 SEER2 • 80% AFUE',desc:'Dependable comfort with the lowest upfront investment.',features:['Single-stage equipment','Standard blower motor','Basic programmable thermostat','10-year parts warranty','Professional installation & removal']},
+      better:{label:'Better',name:'Enhanced Comfort',color:'better',multiplier:1.13,efficiency:'16–17 SEER2 • 96% AFUE',desc:'Balanced efficiency, quieter operation and improved comfort.',features:['Two-stage equipment','Variable-speed blower','Wi-Fi thermostat','Improved humidity control','10-year parts + enhanced labor warranty']},
+      best:{label:'Best',name:'Ultimate Comfort',color:'best',multiplier:1.32,efficiency:'18–20+ SEER2 • 97% AFUE',desc:'Maximum efficiency, quiet operation and precise comfort.',features:['Variable-capacity equipment','Communicating controls','Premium smart thermostat','Advanced humidity management','Premium parts & labor coverage']}
+    };
+    const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
+    function getTonnage(){let sqft=+document.querySelector('#sqft').value||1850;let tons=sqft/550;if(document.querySelector('#age').value==='old')tons+=.25;if(document.querySelector('#insulation').value==='poor')tons+=.25;if(document.querySelector('#ceiling').value==='high')tons+=.25;if(state.stories==='2')tons+=.15;tons=Math.round(tons*2)/2;return Math.min(5,Math.max(2,tons))}
+    function basePrice(tons){const type={gas:7600,heatpump:7900,ac:5200,unsure:7600}[state.system];return type+(tons-2)*1500}
+    function addonsTotal(){return[...document.querySelectorAll('.addon-check:checked')].reduce((s,i)=>s+(+i.value),0)}
+    function recommendation(){if(state.priority==='price')return 'good';if(state.priority==='efficiency'||state.priority==='comfort')return 'best';return 'better'}
+    function render(){
+      const tons=getTonnage(),sqft=+document.querySelector('#sqft').value||1850,rec=recommendation();
+      const systemNames={gas:'AC + Gas Furnace',heatpump:'Heat Pump System',ac:'Air Conditioner Only',unsure:'System To Be Confirmed'};
+      document.querySelector('#sizeSummary').textContent=tons+' tons';
+      document.querySelector('#systemSummary').textContent=systemNames[state.system];
+      document.querySelector('#sqftSummary').textContent=sqft.toLocaleString()+' sq. ft.';
+      document.querySelector('#recommendSummary').textContent=packageData[rec].label;
+      const add=addonsTotal();const cards=document.querySelector('#cards');cards.innerHTML='';
+      Object.entries(packageData).forEach(([key,p])=>{
+        let start=Math.round((basePrice(tons)*p.multiplier+add)/50)*50;
+        if(document.querySelector('#age').value==='old')start+=450;
+        if(document.querySelector('#insulation').value==='poor')start+=350;
+        const high=Math.round(start*1.1/50)*50;const monthly=Math.round(start/84);
+        const article=document.createElement('article');
+        article.className=`package ${p.color} ${rec===key?'recommended':''}`;
+        article.innerHTML=`${rec===key?'<span class="recommend-badge">RECOMMENDED FOR YOU</span>':''}<div class="package-head">${p.label}</div><div class="package-body"><h3>${p.name}</h3><div class="spec">${systemNames[state.system]} • ${tons} Tons • Complete Installation</div><div class="mini-unit"></div><div class="price-label">Estimated installed price</div><div class="price">${money(start)}</div><div class="price-range">to ${money(high)}</div><div class="monthly">Estimated from ${money(monthly)}/mo</div><div class="efficiency"><strong>Unit efficiency</strong><span>${p.efficiency}<br>${p.desc}</span></div><ul class="features-b">${p.features.map(f=>`<li><span class="check">✓</span>${f}</li>`).join('')}</ul><button class="btn-b outline-b details-btn" data-key="${key}">View full details</button><button class="btn-b btn-primary-b book-btn" data-key="${key}" data-price="${start}">Book in-home appointment</button></div>`;
+        cards.appendChild(article);
+      });
+      bindCardButtons();
+    }
+    function bindCardButtons(){
+      document.querySelectorAll('.book-btn').forEach(btn=>btn.onclick=()=>openModal(btn.dataset.key,+btn.dataset.price));
+      document.querySelectorAll('.details-btn').forEach(btn=>btn.onclick=()=>alert(packageData[btn.dataset.key].features.join('\n• ').replace(/^/,'• ')));
+    }
+    function openModal(key,price){state.selectedPackage=key;document.querySelector('#selectedPackageText').textContent=`${packageData[key].label} package selected — estimated starting price ${money(price)}.`;document.querySelector('#leadModal').classList.add('open')}
+    function setStep(n){state.step=n;document.querySelectorAll('.step').forEach(s=>s.classList.toggle('active',+s.dataset.step===n));document.querySelector('#progressBar').style.width=(n*20)+'%';document.querySelector('#backBtn').disabled=n===1;document.querySelector('#nextBtn').textContent=n===5?'View my options':'Next step';if(n===5)document.querySelector('#nextBtn').onclick=()=>document.querySelector('.results-head').scrollIntoView({behavior:'smooth'});else document.querySelector('#nextBtn').onclick=()=>setStep(Math.min(5,state.step+1));render()}
+    document.querySelectorAll('.choice-grid').forEach(group=>group.addEventListener('click',e=>{const b=e.target.closest('.choice');if(!b)return;group.querySelectorAll('.choice').forEach(x=>x.classList.remove('active'));b.classList.add('active');state[group.dataset.name]=b.dataset.value;render()}));
+    document.querySelectorAll('#zip,#sqft,#age,#insulation,#ceiling,#systemAge,#issues').forEach(el=>el.addEventListener('input',render));
+    document.querySelectorAll('.addon-check').forEach(el=>el.addEventListener('change',render));
+    document.querySelector('#nextBtn').onclick=()=>setStep(2);
+    document.querySelector('#backBtn').onclick=()=>setStep(Math.max(1,state.step-1));
+    document.querySelector('#resetBtn').onclick=()=>location.reload();
+    document.querySelector('#closeModal').onclick=()=>document.querySelector('#leadModal').classList.remove('open');
+    document.querySelector('#doneBtn').onclick=()=>document.querySelector('#leadModal').classList.remove('open');
+    document.querySelector('#leadModal').addEventListener('click',e=>{if(e.target.id==='leadModal')e.currentTarget.classList.remove('open')});
+    document.querySelector('#leadForm').addEventListener('submit',e=>{e.preventDefault();const payload={name:`${firstName.value} ${lastName.value}`,phone:phone.value,email:email.value,address:address.value,zip:zip.value,sqft:sqft.value,tons:getTonnage(),system:state.system,package:state.selectedPackage,addons:[...document.querySelectorAll('.addon-check:checked')].map(i=>i.dataset.label)};console.log('HVAC LEAD PAYLOAD',payload);document.querySelector('#formWrap').classList.add('hide');document.querySelector('#success').classList.add('show')});
+    render();
+</script>
+</body>
+</html>
