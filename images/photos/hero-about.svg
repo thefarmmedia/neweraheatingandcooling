@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <defs>
+    <linearGradient id="gheroa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c1f44"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="500" fill="url(#gheroa)"/>
+  
+  <circle cx="564.8" cy="148.0" r="19.200000000000003" fill="none" stroke="#ffffff" stroke-width="4.0"/>
+  <path d="M529.6,252.0 q0,-48.0 70.4,-48.0 q70.4,0 70.4,48.0" fill="none" stroke="#ffffff" stroke-width="4.0"/>
+  <circle cx="635.2" cy="148.0" r="19.200000000000003" fill="none" stroke="#fbbf24" stroke-width="4.0"/>
+  <rect x="0" y="448" width="1200" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="600" y="480" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">The New ERA Team</text>
+</svg>

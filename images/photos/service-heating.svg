@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="gservic" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0c2a"/>
+      <stop offset="100%" stop-color="#3b1a6a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#gservic)"/>
+  
+  <rect x="361.0" y="148.5" width="78.0" height="104.0" rx="6.5" fill="none" stroke="#ffffff" stroke-width="3.9000000000000004"/>
+  <rect x="376.6" y="161.5" width="46.800000000000004" height="28.6" rx="3.9000000000000004" fill="rgba(255,180,50,0.6)"/>
+  <path d="M389.6,175.8 q10.4,-13.0 0,-20.8 q10.4,10.4 10.4,20.8" fill="#fbbf24"/>
+  <line x1="374.0" y1="233.0" x2="426.0" y2="233.0" stroke="#ffffff" stroke-width="2.6"/>
+  <line x1="374.0" y1="243.4" x2="426.0" y2="243.4" stroke="#ffffff" stroke-width="2.6"/>
+  <rect x="0" y="448" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">Heating & Furnace</text>
+</svg>

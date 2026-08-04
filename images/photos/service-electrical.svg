@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="gservic" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a0c"/>
+      <stop offset="100%" stop-color="#4a4a10"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#gservic)"/>
+  <line x1="400" y1="180.0" x2="400" y2="260.0" stroke="#ffffff" stroke-width="3.0" transform="rotate(0,400,220)"/><line x1="388.0" y1="192.0" x2="412.0" y2="206.0" stroke="#ffffff" stroke-width="2.0" transform="rotate(0,400,220)"/><line x1="412.0" y1="192.0" x2="388.0" y2="206.0" stroke="#ffffff" stroke-width="2.0" transform="rotate(0,400,220)"/><line x1="400" y1="180.0" x2="400" y2="260.0" stroke="#ffffff" stroke-width="3.0" transform="rotate(60,400,220)"/><line x1="388.0" y1="192.0" x2="412.0" y2="206.0" stroke="#ffffff" stroke-width="2.0" transform="rotate(60,400,220)"/><line x1="412.0" y1="192.0" x2="388.0" y2="206.0" stroke="#ffffff" stroke-width="2.0" transform="rotate(60,400,220)"/><line x1="400" y1="180.0" x2="400" y2="260.0" stroke="#ffffff" stroke-width="3.0" transform="rotate(120,400,220)"/><line x1="388.0" y1="192.0" x2="412.0" y2="206.0" stroke="#ffffff" stroke-width="2.0" transform="rotate(120,400,220)"/><line x1="412.0" y1="192.0" x2="388.0" y2="206.0" stroke="#ffffff" stroke-width="2.0" transform="rotate(120,400,220)"/>
+  <rect x="0" y="448" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">Electrical Services</text>
+</svg>

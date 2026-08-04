@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="greview" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a0a"/>
+      <stop offset="100%" stop-color="#3a3a10"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#greview)"/>
+  <polygon points="400.0,113.0 385.9,150.6 345.8,152.4 377.2,177.4 366.5,216.1 400.0,194.0 433.5,216.1 422.8,177.4 454.2,152.4 414.1,150.6" fill="#fbbf24" stroke="#fbbf24" stroke-linejoin="round"/>
+  <rect x="0" y="348" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="380" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">500+ Five-Star Reviews</text>
+</svg>

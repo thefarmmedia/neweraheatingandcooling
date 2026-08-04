@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="gbloga" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c2a5a"/>
+      <stop offset="100%" stop-color="#1e4d8c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#gbloga)"/>
+  
+  <rect x="328.0" y="166.0" width="144.0" height="48.0" rx="9.6" fill="none" stroke="#ffffff" stroke-width="3.5999999999999996"/>
+  <line x1="352.0" y1="190" x2="448.0" y2="190" stroke="#ffffff" stroke-width="2.4"/>
+  <circle cx="376.0" cy="190" r="4.8" fill="#ffffff"/>
+  <circle cx="400" cy="190" r="4.8" fill="#ffffff"/>
+  <circle cx="424.0" cy="190" r="4.8" fill="#ffffff"/>
+  <path d="M340.0,204.4 l12.0,-9.6 l12.0,9.6" fill="none" stroke="#fbbf24" stroke-width="2.4"/>
+  <rect x="0" y="398" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="430" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">Repair or Replace Your AC?</text>
+</svg>

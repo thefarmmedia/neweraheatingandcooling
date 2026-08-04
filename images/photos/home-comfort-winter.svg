@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="ghomec" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a3a"/>
+      <stop offset="100%" stop-color="#3a1a6a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#ghomec)"/>
+  
+  <path d="M400,272.5 q-45.0,-30.0 -15.0,-75.0 q7.5,22.5 15.0,15.0 q-7.5,-45.0 30.0,-75.0 q7.5,37.5 -7.5,52.5 q22.5,-15.0 15.0,-37.5 q22.5,30.0 7.5,67.5 q-7.5,30.0 -45.0,52.5 z"
+        fill="#fbbf24" opacity="0.9"/>
+  <rect x="0" y="448" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">Stay Warm All Winter</text>
+</svg>

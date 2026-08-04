@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="gtechw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c2a3a"/>
+      <stop offset="100%" stop-color="#1a4a5a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#gtechw)"/>
+  
+  <circle cx="400" cy="172.0" r="22.400000000000002" fill="none" stroke="#ffffff" stroke-width="4.800000000000001"/>
+  <line x1="400" y1="194.39999999999998" x2="400" y2="244.0" stroke="#ffffff" stroke-width="4.800000000000001"/>
+  <line x1="360.0" y1="212.0" x2="440.0" y2="212.0" stroke="#ffffff" stroke-width="4.800000000000001"/>
+  <line x1="400" y1="244.0" x2="368.0" y2="292.0" stroke="#ffffff" stroke-width="4.800000000000001"/>
+  <line x1="400" y1="244.0" x2="432.0" y2="292.0" stroke="#ffffff" stroke-width="4.800000000000001"/>
+  <path d="M444.8,221.6 l22.400000000000002,-22.400000000000002 l9.600000000000001,9.600000000000001 l-22.400000000000002,22.400000000000002 z" fill="#fbbf24"/>
+  <rect x="0" y="548" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="580" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">NATE-Certified Technician</text>
+</svg>

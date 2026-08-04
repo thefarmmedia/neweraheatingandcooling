@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="gblogf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a0c0c"/>
+      <stop offset="100%" stop-color="#5a1a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#gblogf)"/>
+  
+  <path d="M400,235.5 q-39.0,-26.0 -13.0,-65.0 q6.5,19.5 13.0,13.0 q-6.5,-39.0 26.0,-65.0 q6.5,32.5 -6.5,45.5 q19.5,-13.0 13.0,-32.5 q19.5,26.0 6.5,58.5 q-6.5,26.0 -39.0,45.5 z"
+        fill="#fbbf24" opacity="0.9"/>
+  <rect x="0" y="398" width="800" height="52" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="430" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="16" fill="white" font-weight="600" letter-spacing="0.5">Furnace Warning Signs</text>
+</svg>
