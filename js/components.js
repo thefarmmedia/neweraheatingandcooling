@@ -102,7 +102,7 @@ function renderHeader(activePage) {
   <div class="container">
     <div class="header-inner">
       <a href="/" class="logo" aria-label="${SITE.company} Home">
-        <img src="/images/logo.jpg" alt="${SITE.company} Logo" width="120" height="48" loading="eager">
+        <img src="/images/logo.svg" alt="${SITE.company} Logo" width="148" height="56" loading="eager">
       </a>
       <nav class="nav" aria-label="Main navigation">
         ${navHTML}
@@ -116,7 +116,7 @@ function renderHeader(activePage) {
 </header>
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
   <div class="mobile-menu-top">
-    <a href="/" class="logo"><img src="/images/logo.jpg" alt="${SITE.company}" height="40"></a>
+    <a href="/" class="logo"><img src="/images/logo.svg" alt="${SITE.company}" height="48"></a>
     <button id="closeMenu" aria-label="Close menu" style="background:#f3f4f6;border-radius:8px;padding:8px;font-size:1.3rem">×</button>
   </div>
   ${NAV.map(n => `<a href="${n.href}">${n.label}${n.badge ? ' ✦' : ''}</a>`).join('')}
@@ -177,7 +177,7 @@ function renderFooter() {
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="/images/logo.jpg" alt="${SITE.company}" height="48">
+        <img src="/images/logo-white.svg" alt="${SITE.company}" height="56">
         <p>Springfield's trusted HVAC experts since ${SITE.founded}. Residential &amp; commercial heating, cooling, air quality, and water heater services.</p>
         <a href="tel:${SITE.phoneRaw}" class="phone">${SITE.phone}</a>
         <a href="mailto:${SITE.email}" style="color:rgba(255,255,255,.6);font-size:.88rem">${SITE.email}</a>
