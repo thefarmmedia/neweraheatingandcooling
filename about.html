@@ -4,9 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | New ERA Heating &amp; Cooling | Springfield MO HVAC</title>
-  <meta name="description" content="Learn about New ERA Heating & Cooling — Springfield's trusted HVAC company since 2009. Meet owner Bryan Swanson, our NATE-certified team, and our commitment to honest service.">
+  <meta name="description" content="Meet the New ERA Heating & Cooling team — Bryan Swanson and the crew behind Springfield MO's most trusted HVAC company. Family-owned since 2009.">
   <link rel="canonical" href="https://newerahvac.com/about.html">
   <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .team-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .team-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .team-card--featured {
+      grid-column: span 2;
+      display: flex;
+      flex-direction: row;
+    }
+    @media (max-width: 700px) {
+      .team-card--featured { grid-column: span 1; flex-direction: column; }
+    }
+    .team-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    .team-card--featured .team-photo {
+      width: 220px;
+      min-width: 220px;
+      aspect-ratio: unset;
+      height: 100%;
+    }
+    @media (max-width: 700px) {
+      .team-card--featured .team-photo { width: 100%; height: 280px; min-width: unset; }
+    }
+    .team-info {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .team-role {
+      font-size: .75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      color: var(--blue-mid);
+    }
+    .team-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 0;
+    }
+    .team-bio {
+      font-size: .88rem;
+      color: var(--gray-600);
+      line-height: 1.65;
+      margin: 6px 0 0;
+    }
+    .team-qa {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .team-qa-item {
+      background: var(--gray-50);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+    .team-qa-q {
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--gray-500);
+      margin-bottom: 4px;
+    }
+    .team-qa-a {
+      font-size: .85rem;
+      color: var(--gray-700);
+      line-height: 1.55;
+    }
+    .team-tenure {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-top: 4px;
+    }
+  </style>
 </head>
 <body>
 <div id="topbar"></div>
@@ -24,9 +125,10 @@
 
 <div id="trust-bar"></div>
 
+<!-- Our Story -->
 <section class="section">
   <div class="container">
-    <div class="grid-2" style="gap:64px">
+    <div class="grid-2" style="gap:64px;align-items:center">
       <div>
         <div class="eyebrow">Our Story</div>
         <h2>Built on Trust, Driven by Excellence</h2>
@@ -34,49 +136,21 @@
         <p>After spending years watching homeowners get overcharged and under-served by large corporate HVAC companies, Bryan decided to do things differently. New ERA was built on honest pricing, quality workmanship, and treating every customer like a neighbor — because most of them are.</p>
         <p>Today, New ERA has grown into one of the most respected HVAC companies in the Springfield metro area. We've served thousands of homes and businesses across 24 communities in southwest Missouri, and we're proud to have earned over 500 five-star reviews along the way.</p>
         <p>We're a proud Rheem dealer, which means we install and service one of the most trusted equipment brands in the industry. Every system we install is backed by industry-leading warranties and our own labor guarantee.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px">
+          <div style="background:var(--gray-50);border-radius:10px;padding:14px;text-align:center;font-size:.85rem;font-weight:700">NATE Certified</div>
+          <div style="background:var(--gray-50);border-radius:10px;padding:14px;text-align:center;font-size:.85rem;font-weight:700">Master Mechanical License</div>
+          <div style="background:var(--gray-50);border-radius:10px;padding:14px;text-align:center;font-size:.85rem;font-weight:700">Fully Bonded &amp; Insured</div>
+          <div style="background:var(--gray-50);border-radius:10px;padding:14px;text-align:center;font-size:.85rem;font-weight:700">Rheem Dealer</div>
+        </div>
       </div>
       <div>
-        <div style="background:var(--blue);border-radius:20px;padding:36px;color:white;margin-bottom:24px">
-          <h3 style="color:white;margin-bottom:20px">Bryan Swanson, Owner &amp; Master Technician</h3>
-          <div style="display:flex;flex-direction:column;gap:14px">
-            <div style="display:flex;gap:12px;align-items:center">
-              <span style="background:rgba(255,255,255,.15);border-radius:8px;padding:8px;font-size:1.2rem">🏅</span>
-              <span style="color:rgba(255,255,255,.9)">30+ years of HVAC experience</span>
-            </div>
-            <div style="display:flex;gap:12px;align-items:center">
-              <span style="background:rgba(255,255,255,.15);border-radius:8px;padding:8px;font-size:1.2rem">📜</span>
-              <span style="color:rgba(255,255,255,.9)">NATE Certified Technician</span>
-            </div>
-            <div style="display:flex;gap:12px;align-items:center">
-              <span style="background:rgba(255,255,255,.15);border-radius:8px;padding:8px;font-size:1.2rem">🔧</span>
-              <span style="color:rgba(255,255,255,.9)">Missouri Master Mechanical License</span>
-            </div>
-            <div style="display:flex;gap:12px;align-items:center">
-              <span style="background:rgba(255,255,255,.15);border-radius:8px;padding:8px;font-size:1.2rem">🏠</span>
-              <span style="color:rgba(255,255,255,.9)">Founded New ERA in 2009</span>
-            </div>
-            <div style="display:flex;gap:12px;align-items:center">
-              <span style="background:rgba(255,255,255,.15);border-radius:8px;padding:8px;font-size:1.2rem">⭐</span>
-              <span style="color:rgba(255,255,255,.9)">500+ 5-star customer reviews</span>
-            </div>
-          </div>
-        </div>
-        <div style="background:var(--gray-50);border-radius:16px;padding:24px">
-          <h4 style="margin-bottom:16px">Our Certifications &amp; Credentials</h4>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-            <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;font-size:.85rem;font-weight:700">NATE Certified</div>
-            <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;font-size:.85rem;font-weight:700">Master Mechanical License</div>
-            <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;font-size:.85rem;font-weight:700">Fully Bonded</div>
-            <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;font-size:.85rem;font-weight:700">Fully Insured</div>
-            <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;font-size:.85rem;font-weight:700">Rheem Dealer</div>
-            <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;font-size:.85rem;font-weight:700">EPA 608 Certified</div>
-          </div>
-        </div>
+        <img src="/images/team/brian.webp" alt="Bryan Swanson, owner of New ERA Heating and Cooling" style="width:100%;border-radius:20px;object-fit:cover;object-position:top;aspect-ratio:4/5;display:block">
       </div>
     </div>
   </div>
 </section>
 
+<!-- Core Values -->
 <section class="section section--gray">
   <div class="container">
     <div class="section-header">
@@ -104,6 +178,130 @@
         <h3 style="font-size:1.1rem;margin-bottom:10px">Community Focus</h3>
         <p style="font-size:.88rem">We live and work in Springfield. We're invested in this community — every neighbor we serve is a reflection of our reputation.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Meet the Team -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">The People Behind the Work</div>
+      <h2>Meet the New ERA Team</h2>
+      <p>We're a small, tight-knit crew that genuinely cares — about the work, about each other, and about our customers.</p>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- Bryan Swanson — Featured -->
+      <div class="team-card team-card--featured">
+        <img src="/images/team/brian.webp" alt="Bryan Swanson" class="team-photo">
+        <div class="team-info">
+          <div class="team-role">Owner &amp; Master Technician</div>
+          <h3 class="team-name">Bryan Swanson</h3>
+          <span class="team-tenure">&#10003; With New ERA since the very beginning</span>
+          <p class="team-bio">Bryan does a little bit of everything — service, sales, and administration. If it needs doing, he's probably doing it. He founded New ERA in 2009 after 20+ years in the industry, driven by a desire to give Springfield homeowners an HVAC partner they could actually trust.</p>
+          <div class="team-qa">
+            <div class="team-qa-item">
+              <div class="team-qa-q">What did you want to be growing up?</div>
+              <div class="team-qa-a">An archaeologist! I was fascinated by the idea of digging up pieces of history and discovering the stories behind them.</div>
+            </div>
+            <div class="team-qa-item">
+              <div class="team-qa-q">If you could have any superpower?</div>
+              <div class="team-qa-a">Super healing, like Wolverine. It'd be nice to bounce back from a long day on the job that fast.</div>
+            </div>
+            <div class="team-qa-item">
+              <div class="team-qa-q">Currently reading</div>
+              <div class="team-qa-a"><em>For Whom the Bell Tolls</em> by Ernest Hemingway.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logan Swanson -->
+      <div class="team-card">
+        <img src="/images/team/Logan.webp" alt="Logan Swanson" class="team-photo">
+        <div class="team-info">
+          <div class="team-role">Installation Technician</div>
+          <h3 class="team-name">Logan Swanson</h3>
+          <span class="team-tenure">&#10003; 4 years with New ERA</span>
+          <p class="team-bio">Logan handles installations — getting new systems set up, running efficiently, and ready to keep homes comfortable year-round. He learned the trade from his dad (Bryan), and takes real pride in the workmanship.</p>
+          <div class="team-qa">
+            <div class="team-qa-item">
+              <div class="team-qa-q">Professional mentor?</div>
+              <div class="team-qa-a">Definitely my dad, Bryan. I've learned a lot from him — not just about HVAC, but about running a business the right way and taking pride in your work.</div>
+            </div>
+            <div class="team-qa-item">
+              <div class="team-qa-q">Currently reading</div>
+              <div class="team-qa-a">Anything written by Terry Brooks. Big fan of his fantasy worlds and storytelling — it's a nice escape after a long day.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Patrick Younker -->
+      <div class="team-card">
+        <img src="/images/team/Patrick.webp" alt="Patrick Younker" class="team-photo">
+        <div class="team-info">
+          <div class="team-role">Service &amp; Installation Technician</div>
+          <h3 class="team-name">Patrick Younker</h3>
+          <span class="team-tenure">&#10003; ~1.5 years with New ERA</span>
+          <p class="team-bio">Patrick handles both service and installation work — everything from diagnosing tricky system issues to getting new equipment up and running. Every day brings something different, which keeps things interesting.</p>
+          <div class="team-qa">
+            <div class="team-qa-item">
+              <div class="team-qa-q">HVAC myth you want to bust</div>
+              <div class="team-qa-a">Cranking your thermostat way down won't cool your home any faster. Your system runs at the same pace either way — all you're doing is making it run longer than it needs to.</div>
+            </div>
+            <div class="team-qa-item">
+              <div class="team-qa-q">Favorite band</div>
+              <div class="team-qa-a">Incubus. They mix rock, funk, and soul — great music to unwind to after a busy day.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ryon Woody -->
+      <div class="team-card">
+        <img src="/images/team/woodrow.webp" alt="Ryon Woody" class="team-photo">
+        <div class="team-info">
+          <div class="team-role">Service &amp; Installation Technician</div>
+          <h3 class="team-name">Ryon Woody</h3>
+          <span class="team-tenure">&#10003; With New ERA since the very beginning</span>
+          <p class="team-bio">Ryon handles service and installation, making sure customers stay comfortable and their systems run just the way they should. One of the original crew members and a cornerstone of the New ERA team.</p>
+          <div class="team-qa">
+            <div class="team-qa-item">
+              <div class="team-qa-q">Seasonal maintenance tip</div>
+              <div class="team-qa-a">Change your filter every month. It's quick, easy, and it makes a huge difference in how your system runs.</div>
+            </div>
+            <div class="team-qa-item">
+              <div class="team-qa-q">Favorite pastime</div>
+              <div class="team-qa-a">Paintball! It's a great way to blow off steam and have some fun outside of work.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mel Ezell -->
+      <div class="team-card">
+        <img src="/images/team/Mel.webp" alt="Mel Ezell" class="team-photo">
+        <div class="team-info">
+          <div class="team-role">Office Manager &amp; Customer Service</div>
+          <h3 class="team-name">Mel Ezell</h3>
+          <span class="team-tenure">&#10003; With New ERA since May 2025</span>
+          <p class="team-bio">Mel is the "hub" that keeps the business running smoothly. Her role blends administrative, financial, and customer service responsibilities while supporting both field technicians and company leadership.</p>
+          <div class="team-qa">
+            <div class="team-qa-item">
+              <div class="team-qa-q">Seasonal maintenance tip</div>
+              <div class="team-qa-a">Have your HVAC system professionally inspected twice a year and change your air filters at least every 30 days — especially in the summer.</div>
+            </div>
+            <div class="team-qa-item">
+              <div class="team-qa-q">If you could have any superpower?</div>
+              <div class="team-qa-a">Teleportation. Imagine skipping traffic, showing up anywhere in the world in an instant — bonus points if I could bring a coffee along!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
