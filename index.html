@@ -264,6 +264,8 @@
   @media (max-width:900px) { .sb-grid { grid-template-columns:1fr; gap:36px; } }
   .fin-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; padding:56px 48px; }
   @media (max-width:768px) { .fin-grid { grid-template-columns:1fr; gap:32px; padding:32px 24px; } }
+  .why-grid { gap:64px; }
+  @media (max-width:768px) { .why-grid { gap:32px; } }
   .svc-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:28px; background:white; border:1px solid var(--gray-200); border-radius:14px; padding:6px; }
   .svc-tab { display:flex; align-items:center; gap:8px; padding:11px 20px; border:none; background:transparent; border-radius:10px; font-weight:700; font-size:.9rem; color:var(--gray-600); cursor:pointer; transition:all .18s; white-space:nowrap; }
   .svc-tab:hover { background:var(--gray-50); color:var(--navy); }
@@ -319,47 +321,41 @@
       <!-- Right: package card preview -->
       <div style="display:flex;flex-direction:column;gap:12px">
         <!-- Good -->
-        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:.2s">
-          <div style="display:flex;align-items:center;gap:14px">
-            <div style="background:#12b981;border-radius:8px;padding:7px 12px;font-size:.72rem;font-weight:900;color:white;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap">Comfort Essential</div>
-            <div>
-              <div style="font-weight:800;font-size:.95rem;color:white">14 SEER2 System</div>
-              <div style="font-size:.8rem;color:rgba(255,255,255,.55);margin-top:2px">Standard efficiency · Reliable comfort</div>
-            </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;transition:.2s">
+          <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
+            <div style="background:#12b981;border-radius:8px;padding:6px 10px;font-size:.68rem;font-weight:900;color:white;text-transform:uppercase;letter-spacing:.08em;flex-shrink:0">Comfort Essential</div>
+            <div style="font-weight:800;font-size:.92rem;color:white;white-space:nowrap">14 SEER2</div>
           </div>
           <div style="text-align:right;flex-shrink:0">
-            <div style="font-size:1.45rem;font-weight:900;color:#7eb3ff">$7,400</div>
-            <div style="font-size:.75rem;color:rgba(255,255,255,.5)">~$84/mo</div>
+            <div style="font-size:1.35rem;font-weight:900;color:#7eb3ff">$7,400</div>
+            <div style="font-size:.72rem;color:rgba(255,255,255,.5)">~$84/mo</div>
           </div>
+          <div style="width:100%;font-size:.78rem;color:rgba(255,255,255,.5);padding-top:2px">Standard efficiency · Reliable comfort</div>
         </div>
         <!-- Better — highlighted -->
-        <div style="background:rgba(255,255,255,.13);border:2px solid rgba(99,162,255,.55);border-radius:16px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative">
+        <div style="background:rgba(255,255,255,.13);border:2px solid rgba(99,162,255,.55);border-radius:16px;padding:18px 20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;position:relative">
           <div style="position:absolute;top:-11px;left:20px;background:#fbbf24;color:#0c1f4a;font-size:.68rem;font-weight:900;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.07em">Most Popular</div>
-          <div style="display:flex;align-items:center;gap:14px">
-            <div style="background:#f59e0b;border-radius:8px;padding:7px 12px;font-size:.72rem;font-weight:900;color:white;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap">Comfort Plus</div>
-            <div>
-              <div style="font-weight:800;font-size:.95rem;color:white">17 SEER2 System</div>
-              <div style="font-size:.8rem;color:rgba(255,255,255,.65);margin-top:2px">High efficiency · Lower utility bills</div>
-            </div>
+          <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
+            <div style="background:#f59e0b;border-radius:8px;padding:6px 10px;font-size:.68rem;font-weight:900;color:white;text-transform:uppercase;letter-spacing:.08em;flex-shrink:0">Comfort Plus</div>
+            <div style="font-weight:800;font-size:.92rem;color:white;white-space:nowrap">17 SEER2</div>
           </div>
           <div style="text-align:right;flex-shrink:0">
-            <div style="font-size:1.45rem;font-weight:900;color:#fbbf24">$9,800</div>
-            <div style="font-size:.75rem;color:rgba(255,255,255,.5)">~$112/mo</div>
+            <div style="font-size:1.35rem;font-weight:900;color:#fbbf24">$9,800</div>
+            <div style="font-size:.72rem;color:rgba(255,255,255,.5)">~$112/mo</div>
           </div>
+          <div style="width:100%;font-size:.78rem;color:rgba(255,255,255,.65);padding-top:2px">High efficiency · Lower utility bills</div>
         </div>
         <!-- Best -->
-        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px">
-            <div style="background:#3b82f6;border-radius:8px;padding:7px 12px;font-size:.72rem;font-weight:900;color:white;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap">Ultimate Comfort</div>
-            <div>
-              <div style="font-weight:800;font-size:.95rem;color:white">20 SEER2 System</div>
-              <div style="font-size:.8rem;color:rgba(255,255,255,.55);margin-top:2px">Premium comfort · Max energy savings</div>
-            </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px">
+          <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
+            <div style="background:#3b82f6;border-radius:8px;padding:6px 10px;font-size:.68rem;font-weight:900;color:white;text-transform:uppercase;letter-spacing:.08em;flex-shrink:0">Ultimate Comfort</div>
+            <div style="font-weight:800;font-size:.92rem;color:white;white-space:nowrap">20 SEER2</div>
           </div>
           <div style="text-align:right;flex-shrink:0">
-            <div style="font-size:1.45rem;font-weight:900;color:#7eb3ff">$12,500</div>
-            <div style="font-size:.75rem;color:rgba(255,255,255,.5)">~$143/mo</div>
+            <div style="font-size:1.35rem;font-weight:900;color:#7eb3ff">$12,500</div>
+            <div style="font-size:.72rem;color:rgba(255,255,255,.5)">~$143/mo</div>
           </div>
+          <div style="width:100%;font-size:.78rem;color:rgba(255,255,255,.5);padding-top:2px">Premium comfort · Max energy savings</div>
         </div>
         <p style="font-size:.77rem;color:rgba(255,255,255,.4);text-align:center;margin:4px 0 0">Sample estimates for a 2,000 sq ft Springfield home · Actual pricing customized to your home</p>
       </div>
@@ -371,7 +367,7 @@
 <!-- WHY NEW ERA -->
 <section class="section">
   <div class="container">
-    <div class="grid-2" style="gap:64px">
+    <div class="grid-2 why-grid">
       <div>
         <div class="eyebrow">Why Choose Us</div>
         <h2>Springfield's HVAC Experts — Not a Call Center</h2>
